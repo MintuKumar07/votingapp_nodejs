@@ -1,0 +1,63 @@
+Voting App (steps involving)
+
+---> WHAT??
+We are going to build a voting app which do have all the functionality like we realy do in India.
+
+Models??
+Routes??
+
+Voting App Functionality:->
+1. We will register(signup) new users.
+2. We will login existing users.
+3. We will creat list of candidates so that users can see.
+4. We will signup or login using unique id number: AADHAR NUMBER.
+5. We will creat a admin who manage all the stufs.
+6. Admin can't vote.
+7. We will also count total number of votes a 
+candidate get and also they must be live and sorted.
+8. users can vote only one candidate, after voting they can't vote again.
+9. users can change their password
+
+
+--------------------------------------------------------------------
+
+Routes
+
+user Authentication:
+1. /signup: POST - create a new user account
+2. /login: POST - login to an existing user account
+
+Voting:
+1. /candidates: GET - get a list of all candidates
+2. /vote/:candidateId: POST - vote for a specific candidate
+
+Vote Counts:
+1. /vote/count: GET - Get the list of candidates sorted by their vote count.
+
+User Profile:
+1. /profile: GET - get the user profile
+2. /profile/password: PUT - update the user password
+
+Admin candidate management
+1. /candidates: POST - Create a new candidate.
+2. /candidates/:candidateId: PUT - Update a existing candidate.
+3. /candidates/:candidateId: DELETE - Delete a candidate.
+
+
+--------------------------------------------------------------------
+
+Models
+
+User:
+1. id
+2. name
+3. email
+4. password
+5. aadhar_number
+6. is_admin
+
+Candidate:
+1. id
+2. name
+3. vote_count
+4. Party
